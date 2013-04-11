@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Title
+	</title>
+
+	<!-- Demo Styles -->
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			padding: 50px;
+			font-size: 18px;
+			font-family: Arial, sans-serif;
+		}
+
+		fieldset {
+			border: none;
+		}
+
+		label {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		input[type=text],
+		input[type=email],
+		input[type=phone],
+		select {
+			margin-bottom: 20px;
+			font-size: 18px;
+			padding: 5px 0 5px 10px;
+			display: block;
+		}
+
+		code {
+			margin: 40px 0;
+			padding: 10px;
+			display: block;
+			border: 1px solid #000;
+			background: #ddd;
+		}
+	</style>
+</head>
+<body>
+	<form action="/" method="GET">
+		<fieldset>
+			<label for="firstname">
+				First Name
+			</label>
+			<input type="text" placeholder="First Name" name="firstname" id="firstname" required="required" />
+
+			<label for="lastname">
+				Last Name
+			</label>
+			<input type="text" placeholder="Last Name" name="lastname" id="lastname" required="required" />
+
+			<label for="phone">
+				Phone
+			</label>
+			<input type="text" placeholder="Phone Number" name="phone" id="phone" required="required" />
+
+			<label for="email">
+				Email
+			</label>
+			<input type="text" placeholder="Email Address" name="email" id="email" required="required" />
+
+			<select required="required">
+				<option></option>
+				<option>Test #1</option>
+				<option>Test #2</option>
+			</select>
+
+			<input type="submit" value="submit" />
+		</fieldset>
+	</form>
+
+	<code>
+		$('form').formit();
+	</code>
+
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="js/jquery.formit.js"></script>
+
+	<script>
+		$(document).ready(function() {
+			$('form').formit();
+		});
+	</script>
+</body>
+</html>
